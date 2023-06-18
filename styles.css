@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Grandstander&display=swap");
+
+body {
+    font-family: "Grandstander", cursive;
+}
+
+.container {
+    height: 100vh;
+}
+
+
+.nav-menu {
+    height: 100vh;
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 2px 2px;
+    width: 200px;
+    background-color: #3498db;
+}
+
+.side-nav .nav-item {
+    position: relative;
+    padding: 10px 20px;
+}
+
+.nav-item.active {
+    background-color: #fff;
+    box-shadow: 0px -3px rgba(0, 0, 0, 0.2), 0px 3px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 1s ease-out;
+}
+
+.nav-item.active a {
+    color: #2980b9;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu-text {
+    padding: 0 20px;
+}
+
+.side-nav .nav-item.active::before {
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    bottom: 100%;
+    right: 0;
+    height: 150%;
+    width: 20px;
+    box-shadow: 0 50px 0 0 #fff;
+  
+}
+
+.side-nav .nav-item.active::after {
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    top: 100%;
+    right: 0;
+    height: 350%;
+    width: 20px;
+    box-shadow: 0 -20px 0 0 #fff;
+    transition: box-shadow 2s ease-in;
+}
+
+
+.collapsible {
+  background-color: #332;
+  color: black;
+  cursor: pointer;
+  padding: 2px;
+
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.collapsible:hover {
+  background-color: #332;
+  color: white;
+  
+}
+
+.content {
+  padding: 0 2px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
